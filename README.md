@@ -18,24 +18,28 @@ pip install -r requirements.txt
 
 ## Usage
 
-Clean a single image (overwrites in place):
+Clean a file or folder in place (overwrites the originals):
 
 ```bash
 python remove_metadata.py photo.jpg
+python remove_metadata.py ./photos
 ```
 
-Clean a single image into a new file:
+Clean a file or folder into a new location, preserving filenames and
+subfolder structure:
 
 ```bash
 python remove_metadata.py photo.jpg -o clean.jpg
-```
-
-Clean every image in a folder (recursively) into an output folder,
-preserving filenames and subfolder structure:
-
-```bash
 python remove_metadata.py ./photos -o ./photos_clean
 ```
+
+### Windows: drag-and-drop
+
+No terminal needed — just drag an image or folder onto one of these:
+
+- `clean_inplace.bat` — removes metadata in place
+- `clean_to_new.bat` — saves a cleaned copy next to the original with a
+  `_clean` suffix
 
 ## Supported formats
 
